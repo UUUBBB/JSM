@@ -1,12 +1,12 @@
 <div align="center">
 
-# 🎬 解说猫 - AI影视解说生成器
+# 🎬 解说猫 AIIA
 
 **AI 影视解说自动生成工具**
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.2.7-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.2.8-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,12 @@
 ---
 
 ## 📋 更新日志
+
+### v2.2.8
+> 2026-02-14
+
+- 新增启动时自动检查更新，有新版本在控制台醒目提示
+- 新增GitHub Release一键发布工具
 
 ### v2.2.7
 > 2026-02-13
