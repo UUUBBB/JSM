@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.2.8-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.2.9-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,15 @@
 ---
 
 ## 📋 更新日志
+
+### v2.2.9
+> 2026-02-22
+
+- 视频分析模型默认改为Gemini 2.5 Flash Lite Thinking
+- 测试连接跟随视频分析模型选择，显示响应时间
+- 新增FunASR语音识别（替代Whisper，速度更快）
+- FunASR失败自动回退Whisper
+- 修复config导入路径错误导致文案匹配回退失败的问题
 
 ### v2.2.8
 > 2026-02-14
