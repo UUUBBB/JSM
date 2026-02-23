@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.2.9-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.3.0-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,12 @@
 ---
 
 ## 📋 更新日志
+
+### v2.3.0
+> 2026-02-23
+
+- 修复导出剪映草稿时画面开始结束时间与分镜不一致的问题
+- 修复穿插原片后分镜时间线被重排导致解说词顺序错乱的问题
 
 ### v2.2.9
 > 2026-02-22
