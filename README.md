@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.3.1-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.3.2-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,9 +43,11 @@
 
 ## 📋 更新日志
 
-### v2.3.1
+### v2.3.2
 > 2026-02-24
 
+- 修复FunASR无说话人模式下字幕不分句导致穿插原片失效的问题
+- FunASR子进程崩溃时显示详细错误信息
 - FunASR开启说话人识别（use_spk=True），失败自动回退
 - 说话人信息注入rich_scenes和OSTSelector评分Prompt
 - 保存逐字时间戳（为将来剪映逐字高亮打基础）
