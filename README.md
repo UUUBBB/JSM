@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.3.2-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.3.3-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,17 @@
 ---
 
 ## 📋 更新日志
+
+### v2.3.3
+> 2026-02-25
+
+- 修复AI帮我写模式下分镜开始/结束时间大部分相同的严重BUG
+- 根因：AI编造不存在的场景编号，全部fallback到最后一个场景
+- 方案A改为时间标注优先，场景编号作为回退，语义匹配兜底
+- Prompt输出格式从[场景N]改为[时间-时间]，AI更容易正确引用
+- 场景编号匹配增加30%无效率保护，超限自动放弃回退
+- all_des.txt临时解除加密（调试用）
+- max_tokens统一改为16000
 
 ### v2.3.2
 > 2026-02-24
