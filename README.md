@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.3.3-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.3.4-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,15 @@
 
 ## 📋 更新日志
 
+### v2.3.4
+> 2026-02-28
+
+- 新增12种解说风格：默认/口语化/高能合辑/萌讲八道/直播带货/新闻联播/引导式/吐槽式/深度解析/慢节奏/影视解说/短剧漫剪
+- 解说时长字数映射修正：精简版270字(1分钟)、标准版810字(3分钟)、详细版1350字(5分钟)
+- 添加视频时长校验，防止生成超长解说
+- 风格按钮支持鼠标悬停显示详细描述
+- gui_app.py标记为废弃，添加醒目警告注释
+
 ### v2.3.3
 > 2026-02-25
 
@@ -51,7 +60,6 @@
 - 方案A改为时间标注优先，场景编号作为回退，语义匹配兜底
 - Prompt输出格式从[场景N]改为[时间-时间]，AI更容易正确引用
 - 场景编号匹配增加30%无效率保护，超限自动放弃回退
-- all_des.txt临时解除加密（调试用）
 - max_tokens统一改为16000
 
 ### v2.3.2
