@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.3.4-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.3.5-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,16 @@
 ---
 
 ## 📋 更新日志
+
+### v2.3.5
+> 2026-03-01
+
+- 口播助手字幕生成默认关闭，避免误操作
+- 口播助手显示实时运行日志，处理过程更透明
+- 口播助手字幕智能拆分和匹配算法优化，避免重复和过长
+- AI Tools页面卡片样式优化，去除多余边框
+- 电影解说页面添加矩形边框，界面更整齐
+- 修复gui_app.py编译失败问题（Cython兼容性）
 
 ### v2.3.4
 > 2026-02-28
