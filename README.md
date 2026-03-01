@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.3.5-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.3.6-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,15 @@
 ---
 
 ## 📋 更新日志
+
+### v2.3.6
+> 2026-03-01
+
+- 新增视频压缩功能：H.265编码，智能压缩，保持画质
+- 支持三种质量预设：高质量/标准质量/高压缩
+- 自动检测硬件加速（NVENC/QSV/AMF），失败自动降级软件编码
+- 实时进度显示，压缩统计（原始大小、压缩后大小、压缩率）
+- 实测：359.8MB压缩到60.3MB，压缩率83.2%
 
 ### v2.3.5
 > 2026-03-01
