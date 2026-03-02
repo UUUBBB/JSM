@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.3.6-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.3.7-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,15 @@
 ---
 
 ## 📋 更新日志
+
+### v2.3.7
+> 2026-03-02
+
+- 分镜工作台移除保存数据按钮（数据自动保存）
+- 分镜工作台新增复制字幕功能，支持剪映智能字幕文稿匹配
+- 角色别名改名为角色替换，功能更直观
+- 新增单实例运行检测，防止重复打开程序
+- 复制字幕按钮支持悬浮查看使用说明
 
 ### v2.3.6
 > 2026-03-01
