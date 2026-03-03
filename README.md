@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.3.7-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.3.8-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
