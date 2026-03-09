@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.4.2-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.4.3-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,14 @@
 ---
 
 ## 📋 更新日志
+
+### v2.4.3
+> 2026-03-09
+
+- 修复TTS配音时视频循环导致闪屏的问题
+- TTS时长超过视频片段时改为连续播放后续片段（不慢放、不循环）
+- 优化更新页面 7-Zip 查找逻辑，增加更多路径和详细错误提示
+- 视频播放更流畅，无闪屏现象
 
 ### v2.4.2
 > 2026-03-09
