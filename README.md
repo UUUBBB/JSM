@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.4.3-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.4.4-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,13 @@
 ---
 
 ## 📋 更新日志
+
+### v2.4.4
+> 2026-03-09
+
+- 口播助手：禁用滑轮滚动改变参数，防止误操作
+- 口播助手：画布设置默认改为原始比例
+- 口播助手：所有数字输入框需要点击后才能用滑轮调整
 
 ### v2.4.3
 > 2026-03-09
