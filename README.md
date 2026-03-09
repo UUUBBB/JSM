@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.4.1-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.4.2-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,11 @@
 ---
 
 ## 📋 更新日志
+
+### v2.4.2
+> 2026-03-09
+
+- 修复声音克隆页面录音保存时 CUSTOM_VOICES_FILE 未定义的错误
 
 ### v2.4.1
 > 2026-03-09
