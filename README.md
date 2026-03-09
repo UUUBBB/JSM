@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.3.9-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.4.1-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,20 @@
 ---
 
 ## 📋 更新日志
+
+### v2.4.1
+> 2026-03-09
+
+- 首次启动自动创建桌面快捷方式（解说猫-双击运行）
+- 更新应用逻辑容错优化，提升更新成功率
+
+### v2.4.0
+> 2026-03-09
+
+- 修复设置页面API配置保存失败的问题（类型不匹配）
+- 修复设置加载时下拉框无法正确选中的问题
+- 口播助手新增百分比进度条，实时显示处理进度（0%-100%）
+- 隐藏启动时的MMKV日志输出，控制台更简洁
 
 ### v2.3.9
 > 2026-03-06
