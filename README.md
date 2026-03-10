@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.4.6-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.4.7-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,14 @@
 ---
 
 ## 📋 更新日志
+
+### v2.4.7
+> 2026-03-11
+
+- 修复分镜工作台翻译功能导入错误
+- 修复翻译API请求URL缺少/v1/chat/completions路径
+- 修复视频片段延伸时画面重复闪动问题
+- 优化视频分析max_tokens参数，避免部分API渠道429错误
 
 ### v2.4.6
 > 2026-03-10
