@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.4.7-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.4.8-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,15 @@
 ---
 
 ## 📋 更新日志
+
+### v2.4.8
+> 2026-03-11
+
+- AI解说词生成全面优化：引入六段式故事结构约束
+- 新增4种开头钩子模板：震惊式/危机式/反转式/提问式，解决开头单一问题
+- 新增剧情重构策略：高潮片段→回到起点→推进剧情→最终解释，形成电影感倒叙结构
+- 强制生成完整故事：不再只生成段子，必须有开头、发展、高潮、结局
+- 优化应用于所有12种解说风格：电影/电视剧/综艺/动漫/短剧/体育/纪录片等
 
 ### v2.4.7
 > 2026-03-11
