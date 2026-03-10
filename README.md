@@ -30,7 +30,8 @@
 前往 [Releases](https://github.com/UUUBBB/JSM/releases) 页面下载最新版本。
 
 - **完整安装包**：`AIIA_v{版本号}.7z` — 首次使用下载此文件
-- **增量更新包**：`AIIA_update_v{版本号}.7z` — 已安装用户拖入软件更新页即可升级
+- **增量更新包（推荐）**：`AIIA_update_v{版本号}.zip` — 已安装用户拖入软件更新页即可升级，无需安装7-Zip
+- **增量更新包（7z）**：`AIIA_update_v{版本号}.7z` — 体积更小，需安装7-Zip
 
 ## 🚀 快速开始
 
