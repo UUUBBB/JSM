@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.4.4-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.4.6-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -42,6 +42,21 @@
 ---
 
 ## 📋 更新日志
+
+### v2.4.6
+> 2026-03-10
+
+- 修复设置页面按钮点击参数传递错误
+- 完善按钮焦点策略，防止意外焦点转移
+
+### v2.4.5
+> 2026-03-10
+
+- 优化API连接测试：增加 temperature 参数，提高 max_tokens 到 50
+- 修复API连接测试超时问题，响应时间从15秒降到2-3秒
+- 修复点击测试连接时草稿路径输入框被自动选中的问题
+- 启动画面显示解说猫图标和版本号，提升品牌识别度
+- 保持纯内存缓存机制，避免生成用户可见的缓存文件
 
 ### v2.4.4
 > 2026-03-09
