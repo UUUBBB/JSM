@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.4.8-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.4.9-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,14 @@
 ---
 
 ## 📋 更新日志
+
+### v2.4.9
+> 2026-03-11
+
+- 修复最后片段TTS超长时被裁剪的问题
+- 新增智能借用机制：TTS超长时随机从中间片段借用时长补充
+- 保持TTS音频完整性，解说词永不被截断
+- 优化视频片段填充策略，避免画面重复
 
 ### v2.4.8
 > 2026-03-11
