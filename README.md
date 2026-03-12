@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.5.0-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.5.2-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,26 @@
 ---
 
 ## 📋 更新日志
+
+### v2.5.2
+> 2026-03-13
+
+- 修复EdgeTTS试听按钮导入错误（ModuleNotFoundError）
+- 新增EdgeTTS实时状态更新，配音过程实时显示进度
+
+### v2.5.2
+> 2026-03-13
+
+- 修复EdgeTTS试听按钮导入错误（ModuleNotFoundError）
+- 新增EdgeTTS实时状态更新，配音过程实时显示进度
+
+### v2.5.1
+> 2026-03-12
+
+- 修复文案配视频模式分镜大量丢失的严重BUG
+- 原片插入后按时间排序，避免时间乱序导致重叠
+- 优化重叠检测：多个解说词匹配同一场景时依次播放而不是跳过
+- 分镜保留率从11%提升到100%（61段解说词全部保留）
 
 ### v2.5.0
 > 2026-03-12
