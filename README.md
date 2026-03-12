@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.4.9-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.5.0-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,13 @@
 ---
 
 ## 📋 更新日志
+
+### v2.5.0
+> 2026-03-12
+
+- AI解说词生成时长约束全面优化
+- 新增智能时长预估：根据视频时长和风格自动计算目标字数
+- 解决AI生成解说词过长或过短的问题，提升用户体验
 
 ### v2.4.9
 > 2026-03-11
