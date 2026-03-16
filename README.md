@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.5.2-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.5.3-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,26 @@
 ---
 
 ## 📋 更新日志
+
+### v2.5.3
+> 2026-03-16
+
+- 分镜工作台：导出剪映草稿比例改为工具栏下拉，移除弹窗
+- 分镜工作台：原比例自动检测视频实际宽高，修复竖屏输出横屏问题
+- 分镜工作台：视频匹配统一使用全局变速方案（方案1）
+- 口播视频助手：画布比例原始改为原视频，修复竖屏输出横屏问题
+- AI Tools：视频压缩输出路径标注可选，默认存原视频同目录
+- 修复视频压缩页和口播页选择视频按钮报错
+
+### v2.5.3
+> 2026-03-16
+
+- 分镜工作台：导出剪映草稿比例改为工具栏下拉，移除弹窗
+- 分镜工作台：原比例自动检测视频实际宽高，修复竖屏输出横屏问题
+- 分镜工作台：视频匹配统一使用全局变速方案（方案1）
+- 口播视频助手：画布比例原始改为原视频，修复竖屏输出横屏问题
+- AI Tools：视频压缩输出路径标注可选，默认存原视频同目录
+- 修复视频压缩页和口播页选择视频按钮报错
 
 ### v2.5.2
 > 2026-03-13
