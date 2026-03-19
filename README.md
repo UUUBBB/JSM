@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.5.9-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.6.0-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -44,14 +44,21 @@
 
 ## 📋 更新日志
 
+### v2.6.0
+> 2026-03-19
+
+- 新增智能穿插原片功能（MVP高光选择，自动插入极燃片段到开头）
+- UI重构：穿插原片改为智能穿插原片按钮，默认开启，去除滑块
+- 复用模式不再触发FunASR/Whisper补充识别
+
 ### v2.5.9
 > 2026-03-19
 
 - 文案配视频：新增AI提纯步骤，自动去除章节标题/镜头标注等非解说词内容
-- RAG匹配：新增LLM精排，对Top-K候选重新排序提升匹配精度
-- AI写解说词模式：统一复用文案配视频的RAG匹配流程
+- MVP匹配：新增LLM精排，对Top-K候选重新排序提升匹配精度
+- AI写解说词模式：统一复用文案配视频的MVP匹配流程
 - 修复原片定位问题：先提纯再解析原片标记，确保位置准确
-- 修复RAG缓存维度不匹配问题，自动检测并重建旧缓存
+- 修复MVP缓存维度不匹配问题，自动检测并重建旧缓存
 
 ### v2.5.8
 > 2026-03-18
