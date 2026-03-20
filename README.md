@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.6.0-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.6.2-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,21 @@
 ---
 
 ## 📋 更新日志
+
+### v2.6.2
+> 2026-03-20
+
+- AI帮我写模式：新增原片穿插密度说明，
+- AI自主意识决定提升
+- candidate_scenes备用场景填充优化：TTS过长时依次使用后续相邻场景，不再循环同一片段
+- 导出剪映草稿新增确认弹窗：有配音弹确认/取消，无配音弹先去配音/直接导出/取消
+
+### v2.6.1
+> 2026-03-19
+
+- 修复高光选择缓存未命中导致重复请求的问题
+- 修复LLM精排max_tokens不足导致JSON截断的问题
+- 进度条优化：处理完成后不再从95%倒退到55%
 
 ### v2.6.0
 > 2026-03-19
