@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.6.2-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.6.3-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,15 @@
 ---
 
 ## 📋 更新日志
+
+### v2.6.3
+> 2026-03-21
+
+- 修复首次激活时激活窗口被splash画面遮挡、只能从任务栏看到的问题
+- 激活对话框弹出前自动隐藏splash，确保用户能看到
+- 激活对话框强制置顶+SetForegroundWindow，彻底解决焦点问题
+- 机器码生成改为懒加载，wmic超时从5s降到2s，启动速度提升
+- 授权验证和激活请求移至后台线程，UI全程不卡顿
 
 ### v2.6.2
 > 2026-03-20
