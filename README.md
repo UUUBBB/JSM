@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.6.5-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.6.8-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,31 @@
 ---
 
 ## 📋 更新日志
+
+### v2.6.8
+> 2026-03-23
+
+- 写作风格UI重构：一排卡片+查看更多弹窗，每个风格带图标和角色描述
+- Prompt架构解耦：视频类型只说明素材题材，写作风格独立控制角色/钩子/叙事结构
+- 12种写作风格全部扩展为完整人格指令（角色设定+开头钩子+叙事结构+高频词+情感基调）
+- 输入数据移至Prompt最后，核心要求前置强调完整故事线
+- 删除废弃的对话细化流程（原片穿插已改由AI自主决定）
+- 删除兼容旧版写作风格（sarcastic/dramatic）
+
+### v2.6.7
+> 2026-03-22
+
+- TTS支持全部引擎（Edge-TTS/IndexTTS及未来新引擎）
+- 修复IndexTTS被弹窗阻塞导致不执行的问题
+- 修复正文内容（尾部保护：裁剪量不超过总时长20%）
+- 选择解说风格页面标题改为选择视频类型
+
+### v2.6.6
+> 2026-03-22
+
+- 调试文件写入改为 debug_mode 控制
+- 测试连接失败时控制台打印详细原因（状态码/URL/响应内容）
+- 修复 god_mode_analyzer.py 语法错误（try/except 结构异常）
 
 ### v2.6.5
 > 2026-03-22
