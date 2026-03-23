@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.6.8-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.7.0-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -44,10 +44,28 @@
 
 ## 📋 更新日志
 
+### v2.7.0
+> 2026-03-24
+
+- 设置页新增模型选择下拉，用户可自选分析模型，默认跟随服务器
+- 测试连接按钮移至模型选择同行，测试时使用用户选中的模型
+- 修复多视频时后续时间线片段未引用正确视频素材的问题
+- 修复 candidate_scenes 在多视频场景下未记录所属视频的问题
+- 修复写作风格弹窗选择后触发 sipBadCatcherResult 异常
+- 剪映草稿 draft_materials 本地素材面板现在正确显示引用视频
+- 修复 API 服务下拉保存时 url 字段名不一致导致地址未生效的问题
+
+### v2.6.9
+> 2026-03-23
+
+- 解说辅助输入框改为两行高度QTextEdit
+- 解说辅助label改为「解说辅助（选填）」
+- 解说辅助内容移至最前面优先级最高
+
 ### v2.6.8
 > 2026-03-23
 
-- 写作风格UI重构：一排卡片+查看更多弹窗，每个风格带图标和角色描述
+- 写作风格UI重构：一排卡片+查看更多弹窗，每个风格带角色描述
 - Prompt架构解耦：视频类型只说明素材题材，写作风格独立控制角色/钩子/叙事结构
 - 12种写作风格全部扩展为完整人格指令（角色设定+开头钩子+叙事结构+高频词+情感基调）
 - 输入数据移至Prompt最后，核心要求前置强调完整故事线
