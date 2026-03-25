@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.7.0-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.7.2-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,22 @@
 ---
 
 ## 📋 更新日志
+
+### v2.7.2
+> 2026-03-25
+
+- Edge-TTS音色库按语言分类（中/英/日/韩/泰/印尼/越南/马来/西班牙/葡萄牙/俄/法/德）
+- 新增两级联动音色选择：先选语言分类，再选具体音色
+- 补全西班牙语/法语/德语多地区音色，修正韩语错误音色ID
+- video_pipeline.py 移入 core/ 目录，统一模块结构
+- Edge-TTS音色解析失败时弹窗提示，不再静默fallback中文音色
+
+### v2.7.1
+> 2026-03-24
+
+- 解说工作台新增自定义写作风格输入
+- 解说时长新增约10/20/30分钟超长档位
+- 解说工作台新增解说语言选择（13种语言，动态换算字数）
 
 ### v2.7.0
 > 2026-03-24
