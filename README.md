@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.7.2-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.7.6-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,35 @@
 ---
 
 ## 📋 更新日志
+
+### v2.7.6
+> 2026-03-26
+
+- API不足时立即抛出异常终止流程，不再静默继续
+- 视频分析场景描述为空时主动报错，避免生成空分镜
+- 熔断触发时抛出异常终止，不再静默跳过
+
+### v2.7.5
+> 2026-03-25
+
+- 批量翻译新增重试机制：批量失败自动重试一次，仍失败降级为单条逐一翻译
+- 翻译完成后展示审计结果：显示成功/失败条数及具体失败条目
+- 彻底修复口播助手导出剪映草稿「未找到视频文件」的问题
+- 剪映草稿生成器查找 project_meta.json 新增当前目录候选，兼容更多目录结构
+
+### v2.7.4
+> 2026-03-25
+
+- 口播助手新增「过渡保留」参数，可调节切割点保留的静音时长（默认0.15秒）
+- 修复口播助手导出剪映草稿报「未找到视频文件」的错误
+
+### v2.7.3
+> 2026-03-25
+
+- 修复Edge-TTS切换音色后确认弹窗仍显示第一个音色的问题
+- 修复语言分类切换时信号干扰导致current_voice被重置的问题
+- Edge-TTS语言与文本不匹配时提示友好错误信息
+- API服务地址兜底从http改为https
 
 ### v2.7.2
 > 2026-03-25
