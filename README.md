@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.7.6-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.7.8-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,20 @@
 ---
 
 ## 📋 更新日志
+
+### v2.7.8
+> 2026-03-26
+
+- 场景检测返回0个场景时立即终止并弹窗提示，不再继续生成空分镜
+- 修复智能穿插原片兜底逻辑中的if False死代码，确保审计补插正常触发
+- 修复_audit_ost_injection方法代码结构混乱（重复插入块、except缺少body）
+
+### v2.7.7
+> 2026-03-26
+
+- 场景检测速度提升3-4倍
+- 场景检测结果缓存方案优化
+- GPU不可用时打印详细诊断信息（驱动版本、CUDA版本、更新链接）
 
 ### v2.7.6
 > 2026-03-26
