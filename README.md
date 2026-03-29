@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.8.4-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.8.5-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,13 @@
 ---
 
 ## 📋 更新日志
+
+### v2.8.5
+> 2026-03-29
+
+- 我有文案模式新增「AI 提纯文案」开关，默认开启，可关闭跳过提纯直接使用原文案
+- 文案模式分段粒度约束与 AI 帮我写模式对齐
+- System Prompt 核心法则补全第3条【分段粒度】，修复原来法则编号跳号问题
 
 ### v2.8.4
 > 2026-03-29
