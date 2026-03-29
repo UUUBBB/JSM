@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.8.3-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.8.4-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,17 @@
 ---
 
 ## 📋 更新日志
+
+### v2.8.4
+> 2026-03-29
+
+- 首页草稿卡片新增状态徽章：橙色待分析 / 蓝色待生成 / 绿色已完成
+- 场景检测完成后立即创建草稿预览（含封面图），无需等待全流程结束
+- 支持断点续跑功能
+- 多视频模式下封面图和 project_meta 使用真实视频路径，不再依赖临时拼接文件
+- 熔断继续按钮修复：正确传入 existing_project_dir 触发复用模式
+- 熔断放弃按钮修复：精确清理当前项目中间文件，不再误删其他项目
+- 首页草稿加载优化：只识别 YY_MM_DD_HH_MM 格式，移除旧格式兼容代码
 
 ### v2.8.3
 > 2026-03-29
