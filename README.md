@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.7.8-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.8.3-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,45 @@
 ---
 
 ## 📋 更新日志
+
+### v2.8.3
+> 2026-03-29
+
+- 修复95%卡住问题
+- 修复多视频模式下分镜工作台预览只显示第一个视频的问题
+- 分镜工作台点击行时自动切换对应视频源并跳转时间戳
+
+### v2.8.2
+> 2026-03-28
+
+- 多语言解说词支持：13种语言各自本地化角色设定、示例句、格式说明
+- 修复非中文语言解说词输出中文的问题
+- 每段解说词上限统一为6秒（按语速动态计算字符数）
+- 修复俄语等高语速语言目标字数被误判超限的问题
+- API服务配置重构：统一读写入口，按服务商分别存储Key
+- 修复重启后API服务选择不保留的问题
+- 设置页打开速度优化：云端配置改为后台异步拉取
+- Edge-TTS批量配音进度条修复
+
+### v2.8.1
+> 2026-03-28
+
+- 熔断时，点继续自动复用已完成分块，不再从头重跑
+- API浅浅的优化了下
+
+### v2.8.0
+> 2026-03-27
+
+- 代码瘦身：删除废弃方法和孤立文件，减少约 1700 行冗余代码
+- 统一 import 路径，移除重复的 fallback 定义
+- 归档旧版 UI 组件（style_dashboard、prompt_editor_widget）
+
+### v2.7.9
+> 2026-03-26
+
+- 修复文案配视频模式报错：_generate_narration_from_custom_script/_long_context_map_script/_match_ai_script_to_scenes 方法缺失
+- 修复智能穿插原片开关开启后实际不生效的问题（ost_check 与 _ost_switch 初始状态不同步）
+- 移除普通模式 pipeline_config 中无效的 enable_ost 字段
 
 ### v2.7.8
 > 2026-03-26
