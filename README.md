@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.8.5-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.8.8-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -23,7 +23,7 @@
 | 🔊 **自动配音** | Edge-TTS 多音色 + Index-TTS 语音克隆 |
 | 🎞️ **剪映草稿导出** | 一键导出剪映草稿，支持多种画布比例 |
 | 📐 **分镜工作台** | 可视化编辑分镜、调整时间线、批量配音 |
-| 🤖 **Ai 多模态驱动** | 基于 Ai 多模态大模型，全感知理解力强 |
+| 🤖 **Gemini 驱动** | 基于 Google Gemini 大模型，理解力强 |
 
 ## 📥 下载
 
@@ -43,6 +43,39 @@
 ---
 
 ## 📋 更新日志
+
+### v2.8.8
+> 2026-04-01
+
+- P0修复：开始生成前强制保存API配置，解决测试能通但视频分析用不了的问题
+- P1迁移：ost_selector/narration_translator/workers 全部走 APIClient，统一重试降级
+- P2修复：get_api_base_url 兼容旧字段非URL格式自动转换
+- P3优化：设置页保存成功显示绿色提示，3秒后消失
+- 视频音频合并进度条修复：stderr独立线程读取防阻塞，加时间估算兜底进度
+- SRT导出断句优化：去掉空格断句，末尾标点自动去除
+
+### v2.8.7
+> 2026-03-31
+
+- 分镜工作台新增「导出 SRT」按钮，基于配音时长生成精准字幕时间轴
+- SRT 导出正确处理原片穿插时间段，原片区间自动空出不生成字幕
+- AI Tools 新增「视频音频合并」工具，支持替换/混合音轨、多音频叠加
+- 视频音频合并进度条实时更新，基于 ffprobe 时长 + ffmpeg -progress 解析
+- IndexTTS pynini FstIOError 给出友好提示和修复命令
+- IndexTTS 路径中文检测提前报错
+- GodModeAnalyzer 兼容旧版 use_whisper 参数
+
+### v2.8.6
+> 2026-03-29
+
+- 新建 utils/api_client.py 统一 HTTP 调用层，内置重试、模型降级、余额检测、URL规范化
+- 解说词生成/文案映射补上 max_retries=2，网络抖动不再误触发模型降级
+- OST审计、AI提纯补上 fallback_models，不再无降级直接跳过
+- workers.py 硬编码模型列表改为读 settings.py 的 NARRATION_FALLBACK_MODELS
+- 设置页连通测试替换为 APIClient.test_connection()，与主流程 URL 规范化一致
+- 删除旧 RAG 语义匹配路径约900行及 scene_retriever.py
+- IndexTTS is_fp16 改为自动检测 GPU，无显卡用户不再崩溃
+- IndexTTS stderr 输出打印到日志，方便排查模型加载失败
 
 ### v2.8.5
 > 2026-03-29
