@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.8.8-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.8.9-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,17 @@
 ---
 
 ## 📋 更新日志
+
+### v2.8.9
+> 2026-04-01
+
+- 视频全感知模式节省 30-40% token
+- 解析器加强容错：支持多种时间戳写法变体，字段不足时用默认值填充
+- 兜底策略精确化：检测到 JSON 特征才走 JSON 兜底，否则直接触发重试
+- max_tokens 改为动态计算：根据场景数量自适应，最大 65536
+- 视频压缩加 -fflags +genpts+igndts，修复时间戳异常视频压缩失败问题
+- 授权缓存升级软件不再丢失授权
+- 音色列表：新闻男声改名为新闻女声
 
 ### v2.8.8
 > 2026-04-01
