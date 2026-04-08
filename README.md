@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.8.9-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.9.1-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,18 @@
 ---
 
 ## 📋 更新日志
+
+### v2.9.1
+> 2026-04-02
+
+- Edge-TTS 单独配音加重试机制（最多3次），解决偶发 NoAudioReceived 失败
+- 错误提示优化：区分服务限流和语言不匹配两种原因，不再误导用户
+
+### v2.9.0
+> 2026-04-02
+
+- SRT 导出去掉断句逻辑优化
+- 一键发布和 GitHub 发布脚本统一
 
 ### v2.8.9
 > 2026-04-01
