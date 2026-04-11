@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.9.1-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.9.2-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,12 @@
 ---
 
 ## 📋 更新日志
+
+### v2.9.2
+> 2026-04-02
+
+- 设置页新增 3.1-flash 模型选项
+- 模型选择默认提示改为「新手推荐」
 
 ### v2.9.1
 > 2026-04-02
