@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.9.2-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.9.4-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,21 @@
 ---
 
 ## 📋 更新日志
+
+### v2.9.4
+> 2026-04-13
+
+- 修复视频音频合并页面按钮点击报错（编译后 clicked 信号参数不兼容）
+
+### v2.9.3
+> 2026-04-12
+
+- 启动时自动后台拉取最新配置，不再依赖用户点击设置页才触发
+- 解说词默认模型改为5.4，fallback 顺序优化优先
+- 视频SSLEOFError 纳入自动降级触发条件
+- 设置页新增模型选项
+- 模型选择默认提示改为「新手推荐用这个」
+- Edge-TTS 单独配音加重试机制，区分限流和语言不匹配两种错误
 
 ### v2.9.2
 > 2026-04-02
