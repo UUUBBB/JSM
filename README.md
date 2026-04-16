@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.9.5-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v2.9.6-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -44,10 +44,20 @@
 
 ## 📋 更新日志
 
+### v2.9.6
+> 2026-04-16
+
+- 修复待分析/待生成草稿点击无法续跑的问题
+- 修复 scene_detected 状态续跑优化
+- 修复 processing 状态（中途崩溃）优化
+- StudioWindow 草稿检测逻辑扩展优化
+
 ### v2.9.5
 > 2026-04-14
 
-- 常规更新
+- 启动时自动后台拉取最新配置，不再依赖用户点击设置页才触发
+- 解说词默认模型改为5.4，fallback 顺序优化优先
+- 视频SSLEOFError 纳入自动降级触发条件
 
 ### v2.9.4
 > 2026-04-13
@@ -57,9 +67,6 @@
 ### v2.9.3
 > 2026-04-12
 
-- 启动时自动后台拉取最新配置，不再依赖用户点击设置页才触发
-- 解说词默认模型改为5.4，fallback 顺序优化优先
-- 视频SSLEOFError 纳入自动降级触发条件
 - 设置页新增模型选项
 - 模型选择默认提示改为「新手推荐用这个」
 - Edge-TTS 单独配音加重试机制，区分限流和语言不匹配两种错误
