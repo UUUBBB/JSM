@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v2.9.9-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v3.0.0-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,15 @@
 ---
 
 ## 📋 更新日志
+
+### v3.0.0
+> 2026-04-21
+
+- 剪映草稿生成器重构 TTS 视频对齐
+- 废弃候选场景顺序拼接和尾部循环复用
+- 原始上下文，避免候选场景、缩放信息错取
+- 支持边缘避让和按时长分档取片
+- 精确匹配、单段连续取片、独立素材，并修复原声轨淡入淡出参数错误
 
 ### v2.9.9
 > 2026-04-21
