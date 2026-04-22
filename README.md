@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v3.0.0-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v3.0.1-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,14 @@
 ---
 
 ## 📋 更新日志
+
+### v3.0.1
+> 2026-04-22
+
+- 修复 Edge 批量配音卡在 5% 的问题
+- Edge TTS worker 增加超时和取消机制
+- 分镜页会主动清理残留的 TTS worker
+- 补充 Edge 配音诊断日志，方便排查
 
 ### v3.0.0
 > 2026-04-21
