@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v3.0.1-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v3.0.2-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -44,6 +44,13 @@
 
 ## 📋 更新日志
 
+### v3.0.2
+> 2026-04-22
+
+- 长视频短解说新增全片覆盖约束，强制兼顾开端、中段推进和结局
+- 新增时间戳覆盖审计，检测中段断层、尾部缺失和大跨度跳空
+- 覆盖不达标时自动重试 1 次，保持风格和字数目标不变补足中后段
+
 ### v3.0.1
 > 2026-04-22
 
@@ -55,11 +62,11 @@
 ### v3.0.0
 > 2026-04-21
 
-- 剪映草稿生成器重构 TTS 视频对齐
-- 废弃候选场景顺序拼接和尾部循环复用
-- 原始上下文，避免候选场景、缩放信息错取
-- 支持边缘避让和按时长分档取片
-- 精确匹配、单段连续取片、独立素材，并修复原声轨淡入淡出参数错误
+- 剪映草稿生成器重构 TTS 视频对齐：改为按原始 segment index 精确匹配，彻底消除缺段后的串位问题
+- 废弃候选场景顺序拼接和尾部循环复用，统一改为 1 个 TTS 对应 1 个连续视频段，解决尾部重复和画面不自然问题
+- clip_pool 保留 segment_index、segment_data、zoom_scale 等原始上下文，避免候选场景、缩放信息错取
+- generate_with_tts 新增独立 video material 与更稳妥的取片窗口策略，支持边缘避让和按时长分档取片
+- generate_with_mixed_audio 同步支持 index 精确匹配、单段连续取片、独立素材，并修复原声轨淡入淡出参数错误
 
 ### v2.9.9
 > 2026-04-21
