@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v3.0.2-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v3.0.3-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,14 @@
 ---
 
 ## 📋 更新日志
+
+### v3.0.3
+> 2026-04-23
+
+- 字幕按覆盖全部3种生成模式共5处
+- 分镜工作台新增「字幕」开关（默认开启）生成字幕
+- API 连接异常弹窗新增页面
+- 新用户 100% 失败时提示检查余额是否大于 1 
 
 ### v3.0.2
 > 2026-04-22
