@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v3.0.3-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v3.0.4-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,14 @@
 ---
 
 ## 📋 更新日志
+
+### v3.0.4
+> 2026-04-24
+
+- 优化API极速响应
+- 优化api降级逻辑
+- 新增新人api教程
+- 优化剪映草稿轻量化参数
 
 ### v3.0.3
 > 2026-04-23
