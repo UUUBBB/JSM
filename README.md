@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v3.0.4-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v3.0.5-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,15 @@
 ---
 
 ## 📋 更新日志
+
+### v3.0.5
+> 2026-04-26
+
+- 修复 1 个分块因内容审核（PROHIBITED_CONTENT）
+- 修复 SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC
+- 网络批量异常（SSL/连接错误 > 50%）时紧急降并发到 2 
+- 熔断条件改为复合阈值（批量≥4 且失败≥5 且失败率≥60%）
+- 「放弃」按钮不再删除已分析，下次点「继续」可复用，节省 API 余额和时间
 
 ### v3.0.4
 > 2026-04-24
