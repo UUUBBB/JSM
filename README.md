@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v3.0.5-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v3.0.6-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,15 @@
 ---
 
 ## 📋 更新日志
+
+### v3.0.6
+> 2026-04-26
+
+- 修复剪映 10.x 勾选「遮盖原字幕」不生效修复
+- 字幕遮盖弹窗即时显示，不再被 ffprobe/ffmpeg 阻塞
+- 字幕样式新增 6 套预设可选
+- 新增「阅读模式」字幕样式（黑底白字）
+- 竖版视频默认字号调整为 9
 
 ### v3.0.5
 > 2026-04-26
