@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v3.0.8-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v3.0.9-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,14 @@
 ---
 
 ## 📋 更新日志
+
+### v3.0.9
+> 2026-04-27
+
+- GPT-M2 工作台支持本地优化
+- 本地图片识别支持中文路径（
+- 图生图失败时给出针对性提示
+- 去掉图片卡片下方多余的「📁 打开目录」按钮，UI 更简洁
 
 ### v3.0.8
 > 2026-04-27
