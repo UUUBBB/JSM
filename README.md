@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v3.0.6-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v3.0.8-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,26 @@
 ---
 
 ## 📋 更新日志
+
+### v3.0.8
+> 2026-04-27
+
+- 新增「GPT-M2」AI 生图工作台
+- 侧边栏与 AI Tools 卡片同步上线
+- 比例下拉改为人类可读形式
+- 兼容 自动走聊天接口并解析
+- API 地址智能补齐
+
+### v3.0.7
+> 2026-04-26
+
+- 修复「我有文案」模式分镜偶发出现 [xx.x-xx.x] 时间戳残留
+- AI 图片卡片显示比例
+- 用户气泡文字可选中、左侧加「复制」按钮
+- 加载气泡显示已用时间和分阶段提示文案
+- PNG 保存自动剥离 iCCP profile，避免 libpng warning
+- 修复多轮对话连贯性丢失对齐
+- 修复加载气泡清理时 引发的 NoneType.deleteLater 崩溃
 
 ### v3.0.6
 > 2026-04-26
