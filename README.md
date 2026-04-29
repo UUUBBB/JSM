@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v3.0.9-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v3.1.1-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -44,39 +44,58 @@
 
 ## 📋 更新日志
 
+### v3.1.1
+> 2026-04-29
+
+- 修复软件内升级（拖入 zip 升级包）后启动崩溃/卡住的问题：根因是主程序退出和复制 .pyd 几乎同时发生，老 python 进程仍持有 .pyd 句柄导致复制失败（WinError 32）
+- 新增升级专用入口 _updater.bat：先等待 3 秒确保主程序完全退出，再调用更新脚本应用文件，避免 .pyd 锁定竞态
+- 更新器：部分文件复制失败时不再清理 _pending_update 临时目录，下次双击启动会自动重试剩余文件，重启电脑后通常可自动恢复无需任何手动操作
+- 更新器：失败时打印明确中文引导（建议重启电脑后再次双击 双击启动.bat）并暂停窗口，不再让用户面对残缺版本的 ImportError 崩溃
+- start.bat 保持极简（仅负责启动主程序），升级流程职责完全独立到 _updater.bat
+
+### v3.1.0
+> 2026-04-28
+
+- （内部版本，未稳定发布）升级流程修复探索版本，最终方案见 v3.1.1
+
 ### v3.0.9
 > 2026-04-27
 
-- GPT-M2 工作台支持本地优化
-- 本地图片识别支持中文路径（
-- 图生图失败时给出针对性提示
+- GPT-M2 工作台支持本地图片图生图：prompt 中粘贴 file:///... URL 或裸 Windows 路径（如 K:\xxx.png）会自动读取本地文件转 base64 data URL，以 OpenAI 多模态 image_url 形式提交 chat/completions
+- 本地图片识别支持中文路径（自动 URL 解码）、多张参考图、png/jpg/jpeg/webp/gif/bmp 全格式
+- 图生图失败时给出针对性提示（提醒可能服务商不支持 vision 输入），不再误导为模型不存在
 - 去掉图片卡片下方多余的「📁 打开目录」按钮，UI 更简洁
+- 去掉用户气泡左侧的「复制」按钮，改为所有对话气泡（用户/AI 图片/AI 文本）统一支持右键菜单：复制 + 删除
+- 删除消息时同步清理磁盘上的 PNG 文件，避免历史目录积累垃圾
+- 修复发送按钮在编译版下点击无反应、只能回车发送的问题：lambda 包 clicked 信号默认携带的 checked: bool 参数（v2.9.4 同样 fix 思路）
+- 新建会话按钮同样加固，避免编译版下潜在的参数适配崩溃
+- 修复用户气泡右键弹出系统默认「Copy / Select All」而非自定义菜单的问题：QLabel 启用 NoContextMenu，让事件冒泡到 _UserBubble 触发自定义「复制 / 删除」菜单
 
 ### v3.0.8
 > 2026-04-27
 
-- 新增「GPT-M2」AI 生图工作台
-- 侧边栏与 AI Tools 卡片同步上线
-- 比例下拉改为人类可读形式
-- 兼容 自动走聊天接口并解析
-- API 地址智能补齐
+- 全新「GPT-M2」AI 生图工作台：iOS 风格对话式生图界面，左侧会话列表（新建/重命名/删除），右侧消息流（用户气泡 + AI 图片卡片），支持多轮上下文连贯生图
+- 侧边栏与 AI Tools 卡片同步上线 GPT-M2 入口（带红色 NEW 角标）
+- 比例下拉改为人类可读形式（1:1 方形 / 16:9 西瓜视频 / 9:16 抖音小红书 / 4:3 / 3:4 / 2.35:1 电影宽幅 / 2:1 / 1.85:1 影院 / 9:19.5 5.8寸手机屏），后端按比例自动映射像素发给老接口
+- 兼容 api.xs0.cn 等只支持 chat/completions 的服务商：gpt-image-2 自动走聊天接口并解析 markdown 图片 URL，失败自动 fallback 到 images/generations
+- API 地址智能补 /v1，HTML 响应识别后给出友好提示
+- AI 图片卡片显示比例 + 真实像素尺寸，支持保存/再生成/打开文件夹
+- 用户气泡文字可选中、左侧加「复制」按钮，复制后显示「✓ 已复制」反馈
+- 加载气泡显示已用时间和分阶段提示文案，发送过程中按钮变「● 生成中…」防重复
+- PNG 保存自动剥离 iCCP profile，避免 libpng warning
+- 修复多轮对话连贯性丢失：chat/completions 路径改回单条 user message + [Previous context for style continuity: ...] 上下文模板，与 images/generations 行为对齐
+- 修复加载气泡清理时 widget 已 detach 引发的 NoneType.deleteLater 崩溃
 
 ### v3.0.7
 > 2026-04-26
 
-- 修复「我有文案」模式分镜偶发出现 [xx.x-xx.x] 时间戳残留
-- AI 图片卡片显示比例
-- 用户气泡文字可选中、左侧加「复制」按钮
-- 加载气泡显示已用时间和分阶段提示文案
-- PNG 保存自动剥离 iCCP profile，避免 libpng warning
-- 修复多轮对话连贯性丢失对齐
-- 修复加载气泡清理时 引发的 NoneType.deleteLater 崩溃
+- 修复「我有文案」模式分镜偶发出现 [xx.x-xx.x] 时间戳残留：_parse_timestamped_narration 加兜底正则，剥离 LLM 违规塞进句中的时间戳标记（保留 [剧透警告]/[2026年] 等正常方括号）
 
 ### v3.0.6
 > 2026-04-26
 
-- 修复剪映 10.x 勾选「遮盖原字幕」不生效修复
-- 字幕遮盖弹窗即时显示，不再被 ffprobe/ffmpeg 阻塞
+- 修复剪映 10.x 勾选「遮盖原字幕」不生效：mask 材质移除多余的 path 字段、canvas_blur 精简对齐 pyJianYingDraft 格式（id/type/blur/color/source_platform），10.x 不再因校验过严静默跳过
+- 字幕遮盖弹窗即时显示，不再被 ffprobe/ffmpeg 阻塞 1-5 秒；改为后台 QThread 加载,画布显示旋转弧 + 动态省略号占位，拖动时间轴也走异步并加 race 防护
 - 字幕样式新增 6 套预设可选
 - 新增「阅读模式」字幕样式（黑底白字）
 - 竖版视频默认字号调整为 9
@@ -84,11 +103,11 @@
 ### v3.0.5
 > 2026-04-26
 
-- 修复 1 个分块因内容审核（PROHIBITED_CONTENT）
-- 修复 SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC
-- 网络批量异常（SSL/连接错误 > 50%）时紧急降并发到 2 
-- 熔断条件改为复合阈值（批量≥4 且失败≥5 且失败率≥60%）
-- 「放弃」按钮不再删除已分析，下次点「继续」可复用，节省 API 余额和时间
+- 修复 1 个分块因内容审核（PROHIBITED_CONTENT）误触发熔断：永久错误自动用占位描述兜底，不影响整体任务
+- 修复 SSL: DECRYPTION_FAILED_OR_BAD_RECORD_MAC 等网络错误识别 bug（运算符优先级导致漏判）
+- 网络批量异常（SSL/连接错误 > 50%）时紧急降并发到 2 + 错峰等待 12-20s，避免连锁熔断
+- 熔断条件改为复合阈值（批量≥4 且失败≥5 且失败率≥60%），尾部少量分块不再被误判
+- 「放弃」按钮不再删除已分析分块，下次点「继续」可复用，节省 API 余额和时间
 
 ### v3.0.4
 > 2026-04-24
