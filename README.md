@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v3.5.1-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v3.5.5-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,38 @@
 ---
 
 ## 📋 更新日志
+
+### v3.5.5
+> 2026-06-02
+
+- 分镜工作台:修复导出Premiere按钮点击时报_checked参数导致TypeError的问题
+- 分镜工作台:同步修复导出国际剪映按钮的同类信号参数兼容隐患
+
+### v3.5.4
+> 2026-06-02
+
+- 设置页:国际剪映草稿路径新增独立配置入口,支持浏览、自动检测、校验和保存
+- 设置页:国际剪映草稿路径标注为可选,并复用剪映地址教程链接
+- 视频分析:对冲请求胜出后不再等待废弃慢请求超时,避免9/9后卡在69%约十分钟
+- 视频分析:分块结果已齐时立即退出当前轮调度,并过滤已成功分块避免无意义重试
+
+### v3.5.3
+> 2026-06-02
+
+- 分镜工作台:新增导出Premiere XML,同步导出普通字幕和神回复SRT
+- Premiere导出:修复TTS分镜误用clip_duration导致时间线被拉长的问题
+- Premiere导出:不再使用candidate_scenes拆分时间线,避免视频轨片段暴增
+- 分镜工作台:新增导出国际剪映/CapCut草稿入口
+- 国际剪映导出:写入CapCut平台标识,避免草稿来源异常提示
+
+### v3.5.2
+> 2026-06-01
+
+- 多视频剪映导出:无配音导出优先使用video_source,避免拼接全局时间误用于原视频
+- 多视频处理:补充ffmpeg裁剪/拼接失败检查和零时长校验
+- 多视频处理:清理完整临时目录,避免残留seg片段和concat列表
+- 多视频处理:同名视频文件直接拦截,避免剪映素材映射错配
+- 多视频分镜:检测跨视频边界分镜并写入标记和日志提示
 
 ### v3.5.1
 > 2026-05-31
