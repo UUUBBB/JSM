@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v3.5.5-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v5.0.1-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,17 @@
 ---
 
 ## 📋 更新日志
+
+### v5.0.0
+> 2026-06-08
+
+- 新增一键仿爆款工作流,支持视频处理、字幕重构、解说翻译、批量配音和草稿导出
+- 一键仿爆款:接入本地识别与智能断句,支持多语言识别和独立子进程处理
+- 一键仿爆款:接入TK多语言本地配音,支持音色库试听、批量配音和声音复刻入口
+- 一键仿爆款:支持全自动处理、单视频处理、剪映/Premiere/国际剪映导出入口
+- 首页草稿:支持一键仿爆款项目展示、状态推断和手动刷新
+- 剪辑脚本:优化原始字幕、重构字幕、解说词编辑,修正说话人列不再误显示配音音色
+- 稳定性:优化进度反馈、视频预览刷新和临时文件清理逻辑
 
 ### v3.5.5
 > 2026-06-02
@@ -90,7 +101,6 @@
 
 - 修复含Apple数据流视频分块压缩全部失败
 - FFmpeg显式指定音视频流,忽略未知轨道
-- 请认准正版解说猫。其他随时封账号，官方微信：fxb665
 
 ### v3.4.9
 > 2026-05-27
