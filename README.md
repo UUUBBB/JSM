@@ -6,7 +6,7 @@
 
 一键生成电影解说视频 · AI智能分镜 · 自动配音 · 导出剪映草稿
 
-![Version](https://img.shields.io/badge/version-v5.0.1-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-v5.0.3-blue?style=flat-square)
 ![Platform](https://img.shields.io/badge/platform-Windows-lightgrey?style=flat-square)
 ![Python](https://img.shields.io/badge/python-3.12-green?style=flat-square)
 
@@ -43,6 +43,30 @@
 ---
 
 ## 📋 更新日志
+
+### v5.0.3
+> 2026-06-13
+
+- 一键仿爆款:新增云端处理
+- 文案优化:新增从分析视频到优化文案功能
+- 一键仿爆款:优化本地运行速度
+- 一键仿爆款:升级字级时间戳校对功能
+
+### v5.0.2
+> 2026-06-13
+
+- 一键仿爆款:步骤1本地字幕识别改为快速文本识别加精准时间轴对齐的两阶段流程
+- 一键仿爆款:修复子进程可能误加载旧版编译模块导致速度异常变慢的问题
+- 一键仿爆款:移除Windows环境下不兼容的CUDA内存分配参数,降低识别阶段卡死风险
+- 一键仿爆款:升级包补充分发薄入口,确保用户端加载新版识别核心
+
+### v5.0.1
+> 2026-06-10
+
+- 一键仿爆款:优化步骤1本地字幕识别流程,改为先快速识别文本再执行精准时间轴对齐
+- 一键仿爆款:修复Qwen ASR子进程误加载旧版编译模块导致速度异常变慢的问题
+- 一键仿爆款:移除Windows环境下不兼容的CUDA内存分配参数,降低识别阶段卡死风险
+- 一键仿爆款:升级包补充分发Qwen ASR薄入口,确保用户端加载新版识别核心
 
 ### v5.0.0
 > 2026-06-08
